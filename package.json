@@ -6,6 +6,6 @@
     "nan": "^1.7.0"
   },
   "scripts": {
-    "install": "cmake-js rebuild"
+    "postinstall": "cmake-js rebuild"
   }
 }
