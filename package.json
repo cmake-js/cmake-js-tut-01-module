@@ -2,10 +2,10 @@
   "name": "cmake-js-tut-01-module",
   "version": "1.0.0",
   "dependencies": {
-    "cmake-js": "^0.8.2",
+    "cmake-js": "^0.8.3",
     "nan": "^1.7.0"
   },
   "scripts": {
-    "install": "cmake-js rebuild"
+    "install": "node ./node_modules/.bin/cmake-js rebuild"
   }
 }
