@@ -1,16 +1,16 @@
-# Name of the project is the name of the addon
+# Name of the project (will be the name of the plugin)
 project (addon)
 
 # Essential include files to build a node addon,
 # you should add this line in every CMake.js based project.
 include_directories(${CMAKE_JS_INC})
 
-# Declare the source files location
+# Declare the location of the source files
 file(GLOB SOURCE_FILES "src/*.cc" "src/*.h")
 
 # This line will tell CMake that we're building a shared library
-# named after the project's name
 # from the above source files
+# named after the project's name
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 # This line will give our library file a .node extension without any "lib" prefix

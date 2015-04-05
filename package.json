@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Native module calculating estimate of PI",
   "dependencies": {
+    "bindings": "^1.2.1",
     "cmake-js": "*",
     "nan": "^1.7.0"
   },
