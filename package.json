@@ -8,6 +8,6 @@
     "nan": "^1.7.0"
   },
   "scripts": {
-    "install": "node ./node_modules/.bin/cmake-js rebuild"
+    "install": "node ./node_modules/cmake-js/bin/cmake-js rebuild"
   }
 }
