@@ -4,7 +4,7 @@
   "description": "Native module calculating estimate of PI",
   "dependencies": {
     "bindings": "^1.2.1",
-    "cmake-js": "/home/gabor/git/cmake-js",
+    "cmake-js": "unbornchikken/cmake-js#nw.js-compat",
     "nan": "^1.7.0"
   },
   "scripts": {
@@ -12,6 +12,8 @@
   },
   "config": {
     "cmake-js": {
+      "runtime": "nw",
+      "runtimeVersion": "0.12.1"
     }
   }
 }
