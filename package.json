@@ -4,10 +4,10 @@
   "description": "Native module calculating estimate of PI",
   "dependencies": {
     "bindings": "^1.2.1",
-    "cmake-js": "*",
+    "cmake-js": "^0.11.1",
     "nan": "^1.7.0"
   },
   "scripts": {
-    "install": "node ./node_modules/cmake-js/bin/cmake-js rebuild"
+    "install": "cmake-js rebuild"
   }
 }
