@@ -8,6 +8,10 @@
     "nan": "^1.7.0"
   },
   "scripts": {
+    "test": "mocha ./tests",
     "install": "cmake-js rebuild"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
   }
 }
