@@ -4,14 +4,14 @@
   "description": "Native module calculating estimate of PI",
   "dependencies": {
     "bindings": "^1.2.1",
-    "cmake-js": "git+https://github.com/Ivshti/cmake-js#4f10fcbfe4ffee9ddc3629e053b6bca245b519d0",
+    "cmake-js": "unbornchikken/cmake-js",
     "nan": "^1.7.0"
   },
   "scripts": {
-    "install": "node ./node_modules/cmake-js/bin/cmake-js rebuild"
+    "test": "mocha ./tests",
+    "install": "cmake-js rebuild"
   },
-  "cmake-js": {
-    "runtime": "electron",
-    "runtimeVersion": "0.26.0"
+  "devDependencies": {
+    "mocha": "^2.2.5"
   }
 }
