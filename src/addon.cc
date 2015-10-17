@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2015 NAN contributors
  *
- * MIT License <https://github.com/rvagg/nan/blob/master/LICENSE.md>
+ * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
  ********************************************************************/
 
 #include <nan.h>
@@ -14,15 +14,18 @@ using v8::FunctionTemplate;
 using v8::Handle;
 using v8::Object;
 using v8::String;
+using Nan::GetFunction;
+using Nan::New;
+using Nan::Set;
 
 // Expose synchronous and asynchronous access to our
 // Estimate() function
-void InitAll(Handle<Object> exports) {
-  exports->Set(NanNew<String>("calculateSync"),
-    NanNew<FunctionTemplate>(CalculateSync)->GetFunction());
+NAN_MODULE_INIT(InitAll) {
+  Set(target, New<String>("calculateSync").ToLocalChecked(),
+    GetFunction(New<FunctionTemplate>(CalculateSync)).ToLocalChecked());
 
-  exports->Set(NanNew<String>("calculateAsync"),
-    NanNew<FunctionTemplate>(CalculateAsync)->GetFunction());
+  Set(target, New<String>("calculateAsync").ToLocalChecked(),
+    GetFunction(New<FunctionTemplate>(CalculateAsync)).ToLocalChecked());
 }
 
 NODE_MODULE(addon, InitAll)
